@@ -80,6 +80,6 @@ text = st.text_input("Enter Your Text")
 
 if text:
     task = f"translation_{swapped_languages[from_lang]}_to_{swapped_languages[to_lang]}"
-    translator = pipeline(task=task, model="facebook/m2m100_418M")
+    translator = pipeline(task=task, model="alirezamsh/small100")
     output = translator(text)
     st.write("Translated:", output[0]['translation_text'])
